@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "portfolio-shashank",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+

@@ -1,0 +1,51 @@
+<!-- 
+  EMAILJS SETUP GUIDE
+  
+  This file shows you how to set up EmailJS if you choose that option.
+  Don't use this file directly - it's just a reference.
+-->
+
+<!-- Step 1: Add EmailJS SDK to your index.html <head> -->
+<!-- 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+-->
+
+<!-- Step 2: Initialize EmailJS in script.js -->
+<!-- 
+emailjs.init("YOUR_PUBLIC_KEY"); // Get this from EmailJS dashboard
+-->
+
+<!-- Step 3: Update form submission -->
+<!-- 
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    try {
+        await emailjs.sendForm(
+            'YOUR_SERVICE_ID',    // From EmailJS dashboard
+            'YOUR_TEMPLATE_ID',   // From EmailJS dashboard
+            contactForm,
+            'YOUR_PUBLIC_KEY'     // From EmailJS dashboard
+        );
+        
+        alert('Message sent successfully! I'll get back to you soon.');
+        contactForm.reset();
+    } catch (error) {
+        alert('Failed to send message. Please try again or email me directly.');
+        console.error('EmailJS Error:', error);
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
+-->
+
