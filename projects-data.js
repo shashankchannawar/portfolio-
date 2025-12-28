@@ -1,35 +1,18 @@
-// Projects Data File
-// Add your projects here following this structure
-// Then update the script.js file to import this data
-
 const projectsData = [
     {
-        title: "Enhancing Rail Madad with AI-Powered Complaint Management",
-        description: "Developed a complaint management system using MongoDB and AI-powered prioritization. Implemented a chatbot for instant feedback and classification of issues by severity. Improved response time and automated complaint tracking through an intuitive admin dashboard.",
-        image: "projects/rail-madad.jpg", // Place your project image in the projects folder
-        liveLink: "#", // Add your live project URL here
-        githubLink: "#", // Add your GitHub repository URL here
-        tags: ["Python", "MongoDB", "AI", "Chatbot", "Machine Learning"]
+        title: "Tongue Disease Detection Using Deep Learning",
+        description: "<strong>Problem Statement:</strong> Early detection of tongue-related diseases is critical, but diagnosis often depends on manual visual inspection by specialists, which can be time-consuming, subjective, and inaccessible in remote or under-resourced areas.<br><br><strong>Solution:</strong> Developed a Deep Learning–based image classification system that analyzes tongue images and predicts possible disease categories. The system automates preliminary screening and assists medical professionals in faster decision-making.<br><br><strong>Tech Stack:</strong> Python, Deep Learning (CNN, Transfer Learning), TensorFlow / Keras, OpenCV, NumPy, Image preprocessing & augmentation.<br><strong>Environment:</strong> Jupyter Notebook / Google Colab",
+        image: "images/tongue-disease.jpg",
+        liveLink: "#",
+        githubLink: "#",
+        tags: ["Python", "Deep Learning", "CNN", "Transfer Learning", "OpenCV"]
     },
     {
-        title: "AI-powered Tongue Disease Detection using CNNs",
-        description: "Designed a CNN-based deep learning model to detect oral diseases using tongue images. Enhanced diagnostic accuracy through data augmentation and transfer learning. Supports early detection of oral infections, deficiencies, and cancer indicators.",
-        image: "projects/tongue-disease.jpg", // Place your project image in the projects folder
-        liveLink: "#", // Add your live project URL here
-        githubLink: "#", // Add your GitHub repository URL here
-        tags: ["Python", "CNN", "Deep Learning", "TensorFlow", "Medical AI"]
+        title: "AI-Powered Complaint Management System",
+        description: "<strong>Problem:</strong> Manual complaint tracking caused delays and poor resolution visibility.<br><br><strong>Solution:</strong> Built an ML-based system to auto-classify complaints and track lifecycle.<br><br><strong>Impact:</strong> Reduced manual effort by ~40%, improved response tracking.<br><br><strong>Tech:</strong> Python, MongoDB, NLP, ML, Dashboard.",
+        image: "images/complaint-system.jpg",
+        liveLink: "#",
+        githubLink: "#",
+        tags: ["Python", "MongoDB", "NLP", "Machine Learning", "Dashboard"]
     }
-    // Add more projects here:
-    // {
-    //     title: "Your Project Title",
-    //     description: "Your project description",
-    //     image: "projects/your-image.jpg",
-    //     liveLink: "https://your-live-project.com",
-    //     githubLink: "https://github.com/yourusername/your-repo",
-    //     tags: ["Tag1", "Tag2", "Tag3"]
-    // }
 ];
-
-// If you want to use this file separately, uncomment the line below in script.js:
-// const projectsData = [...]; // and import from here
-

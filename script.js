@@ -79,6 +79,14 @@ const projectsData = [
         liveLink: "#",
         githubLink: "#",
         tags: ["Python", "CNN", "Deep Learning", "TensorFlow", "Medical AI"]
+    },
+    {
+        title: "Portfolio Website",
+        description: "A comprehensive personal portfolio showcasing skills, projects, and certifications. Built with responsive HTML, CSS, and JavaScript featuring smooth animations and an interactive design.",
+        image: "images/portfolio-preview.jpg",
+        liveLink: "https://portfolio-shashank-liard.vercel.app/",
+        githubLink: "#",
+        tags: ["HTML", "CSS", "JavaScript", "Vercel"]
     }
     // Add more projects here following the same structure
 ];
@@ -98,25 +106,21 @@ function generateProjectPlaceholder(title) {
 // Load projects dynamically
 function loadProjects() {
     const projectsGrid = document.getElementById('projects-grid');
-    
+
     if (!projectsGrid) return;
-    
+
     projectsData.forEach((project, index) => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card fade-in';
         projectCard.style.animationDelay = `${index * 0.1}s`;
-        
+
         const placeholderBg = generateProjectPlaceholder(project.title);
         const shortTitle = project.title.split(' ').slice(0, 3).join(' ');
-        
+
         projectCard.innerHTML = `
             <div class="project-image" style="background: ${placeholderBg};">
                 <img src="${project.image}" alt="${project.title}" 
                      onerror="this.style.display='none'; this.parentElement.innerHTML+='<div style=\'position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:2rem; font-weight:bold; text-align:center; padding:1rem;\'>${shortTitle}</div>';">
-                <div class="project-overlay">
-                    ${project.liveLink !== '#' ? `<a href="${project.liveLink}" class="project-link" target="_blank" aria-label="View Live"><i class="fas fa-external-link-alt"></i></a>` : ''}
-                    ${project.githubLink !== '#' ? `<a href="${project.githubLink}" class="project-link" target="_blank" aria-label="View Code"><i class="fab fa-github"></i></a>` : ''}
-                </div>
             </div>
             <div class="project-info">
                 <h3>${project.title}</h3>
@@ -124,9 +128,13 @@ function loadProjects() {
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
                 </div>
+                <div class="project-links-footer">
+                    ${project.liveLink ? `<a href="${project.liveLink}" class="btn-small btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+                    ${project.githubLink ? `<a href="${project.githubLink}" class="btn-small btn-secondary-dark" target="_blank"><i class="fab fa-github"></i> GitHub</a>` : ''}
+                </div>
             </div>
         `;
-        
+
         projectsGrid.appendChild(projectCard);
     });
 }
@@ -137,15 +145,15 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        
+
         // Show loading state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
+
         // Formspree will handle the submission
         // The form will submit normally and Formspree will process it
         // User will be redirected based on the _next hidden field
-        
+
         // Reset button text after a delay (in case of error)
         setTimeout(() => {
             submitBtn.textContent = originalText;
@@ -174,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
-    
+
     // Load projects
     loadProjects();
 });
@@ -183,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
-    
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -191,7 +199,7 @@ function typeWriter(element, text, speed = 100) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
