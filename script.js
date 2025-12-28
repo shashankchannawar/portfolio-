@@ -68,7 +68,7 @@ const projectsData = [
         title: "Enhancing Rail Madad with AI-Powered Complaint Management",
         description: "Developed a complaint management system using MongoDB and AI-powered prioritization. Implemented a chatbot for instant feedback and classification of issues by severity. Improved response time and automated complaint tracking through an intuitive admin dashboard.",
         image: "projects/rail-madad.jpg",
-        liveLink: "#",
+        liveLink: "https://railmadad-deploy.vercel.app/",
         githubLink: "#",
         tags: ["Python", "MongoDB", "AI", "Chatbot", "Machine Learning"]
     },
@@ -76,7 +76,7 @@ const projectsData = [
         title: "AI-powered Tongue Disease Detection using CNNs",
         description: "Designed a CNN-based deep learning model to detect oral diseases using tongue images. Enhanced diagnostic accuracy through data augmentation and transfer learning. Supports early detection of oral infections, deficiencies, and cancer indicators.",
         image: "projects/tongue-disease.jpg",
-        liveLink: "#",
+        liveLink: "https://tongue-disease-5.onrender.com/",
         githubLink: "#",
         tags: ["Python", "CNN", "Deep Learning", "TensorFlow", "Medical AI"]
     },
