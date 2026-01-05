@@ -87,6 +87,18 @@ const projectsData = [
         liveLink: "https://portfolio-shashank-liard.vercel.app/",
         githubLink: "#",
         tags: ["HTML", "CSS", "JavaScript", "Vercel"]
+    },
+    {
+        title: "End-to-End Data Engineering Pipeline – FMCG Retail Data Consolidation",
+        description: "Built an end-to-end ETL pipeline on Databricks to consolidate data from two retail companies post-acquisition using
+Bronze–Silver–Gold(Medallion) architecture.
+● Processed and transformed large - scale FMCG transactional data using PySpark and Spark SQL, implementing data
+cleansing, deduplication, and schema alignment.
+● Delivered analytics - ready Gold tables and an interactive BI dashboard to enable business insights and decision - m",
+image: "images/portfolio-preview.jpg",
+    liveLink: "#",
+        githubLink: "#",
+            tags: ["PySpark", "Spark SQL", "Databricks", "Medallion Architecture"]
     }
     // Add more projects here following the same structure
 ];
